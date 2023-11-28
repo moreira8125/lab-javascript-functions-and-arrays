@@ -128,13 +128,7 @@ function avg(arr) {
     return null;
   }
 
-  let lettersCount = 0
-  
-  arr.forEach(function (element){
-    lettersCount+= element.length
-  })
-
-  return lettersCount/arr.length
+  return sum(arr)/arr.length
 }
 
 
