@@ -182,14 +182,8 @@ function doesWordExist(arr, word) {
     } 
   }
 
-
-
   return isInTheArr
 }
-
-
-
-
 
 
 // Iteration #7: Count repetition
@@ -220,13 +214,7 @@ function howManyTimes(arr, word) {
   }
  })
 
- if(count === 0){
-  return 0
- } else if (count === 1){
-  return 1
-} else if (count === 5){
-  return 5
-} 
+return count
 
 }
 
