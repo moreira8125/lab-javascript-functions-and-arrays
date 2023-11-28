@@ -128,34 +128,16 @@ function avg(arr) {
     return null;
   }
 
-
-  let count = []
- arr.forEach(function (element){
-  if(typeof element === 'number'){
-    count.push(element)
-  }
- })
+  let lettersCount = 0
   
+  arr.forEach(function (element){
+    lettersCount+= element.length
+  })
 
-return arr.length/count.length
-
-
-  // let numArr = [];
-  // arr.forEach(function (element){
-  //     if(typeof element === 'number'){
-  //       numArr.push(element)
-  //     }
-  // })
-
-  // let sumOfArr = 0;
-  // numArr.forEach(function(num){
-  //   sumOfArr+= num;
-  // })
-
-  // return sumOfArr / numArr.length
-
-  
+  return lettersCount/arr.length
 }
+
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -193,7 +175,7 @@ function uniquifyArray(arr) {
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist(arr) {
+function doesWordExist(arr, word) {
   if(arr.length === 0){
     return null;
   }
@@ -201,7 +183,7 @@ function doesWordExist(arr) {
   let isInTheArr = false;
 
   for (const element of arr) {
-    if (wordsFind.includes(element)) {
+    if (arr.includes(word)) {
       isInTheArr = true;
     } 
   }
